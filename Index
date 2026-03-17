@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A practical step-by-step guide for foreign founders to form a Wyoming LLC, get an EIN, file a BOI report, and open a U.S. business bank account." />
+  <title>Wyoming LLC Guide for Foreign Founders</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Font: DM Sans — clean, readable, practical feel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- =============================================
+       STICKY NAVIGATION
+  ============================================= -->
+  <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">Wyoming LLC Guide</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <!-- Hamburger icon -->
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+          <rect y="4" width="22" height="2" rx="1" fill="currentColor"/>
+          <rect y="10" width="22" height="2" rx="1" fill="currentColor"/>
+          <rect y="16" width="22" height="2" rx="1" fill="currentColor"/>
+        </svg>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#steps">Steps</a></li>
+        <li><a href="#checklist">Free Checklist</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#checklist" class="nav-cta">Get Checklist</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- =============================================
+         SECTION 1: HERO
+    ============================================= -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <!-- Simple hero illustration using inline SVG shapes — no copyrighted imagery -->
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 420 180" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+          <!-- Background bar -->
+          <rect x="0" y="80" width="420" height="60" rx="8" fill="#EFF6FF"/>
+          <!-- Document icon -->
+          <rect x="40" y="50" width="60" height="76" rx="6" fill="#DBEAFE"/>
+          <rect x="52" y="68" width="36" height="4" rx="2" fill="#93C5FD"/>
+          <rect x="52" y="78" width="28" height="4" rx="2" fill="#93C5FD"/>
+          <rect x="52" y="88" width="32" height="4" rx="2" fill="#93C5FD"/>
+          <rect x="52" y="98" width="24" height="4" rx="2" fill="#BFDBFE"/>
+          <rect x="68" y="50" width="20" height="20" rx="3" fill="#BFDBFE"/>
+          <!-- Arrow -->
+          <path d="M108 90 L130 90" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M124 84 L131 90 L124 96" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <!-- EIN card -->
+          <rect x="138" y="58" width="72" height="52" rx="6" fill="#DBEAFE"/>
+          <text x="174" y="80" text-anchor="middle" font-size="11" font-family="DM Sans, sans-serif" fill="#1D4ED8" font-weight="600">EIN</text>
+          <rect x="150" y="86" width="48" height="4" rx="2" fill="#93C5FD"/>
+          <rect x="155" y="95" width="38" height="4" rx="2" fill="#BFDBFE"/>
+          <!-- Arrow -->
+          <path d="M218 90 L240 90" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M234 84 L241 90 L234 96" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <!-- Bank icon -->
+          <rect x="248" y="60" width="68" height="50" rx="6" fill="#DBEAFE"/>
+          <rect x="256" y="86" width="8" height="18" rx="2" fill="#93C5FD"/>
+          <rect x="268" y="80" width="8" height="24" rx="2" fill="#2563EB"/>
+          <rect x="280" y="86" width="8" height="18" rx="2" fill="#93C5FD"/>
+          <rect x="292" y="90" width="8" height="14" rx="2" fill="#93C5FD"/>
+          <rect x="252" y="104" width="60" height="4" rx="2" fill="#BFDBFE"/>
+          <path d="M256 68 L282 60 L308 68" stroke="#1D4ED8" stroke-width="2" fill="#DBEAFE"/>
+          <!-- Check badge -->
+          <circle cx="370" cy="90" r="28" fill="#DCFCE7"/>
+          <path d="M356 90 L366 100 L386 78" stroke="#16A34A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-badge">Step-by-step guide for non-U.S. residents</div>
+        <h1 id="hero-heading">Start a U.S. LLC as a Foreigner</h1>
+        <p class="hero-sub">
+          A practical guide to form a Wyoming LLC, get an EIN, file your BOI report,
+          open a U.S. business bank account, and understand the main compliance requirements.
+        </p>
+        <p class="hero-tagline">No legal jargon. Just the steps.</p>
+        <div class="hero-actions">
+          <a href="#steps" class="btn btn-primary">Start the Guide</a>
+          <a href="#checklist" class="btn btn-secondary">Get the Free Checklist</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 2: QUICK ROADMAP
+    ============================================= -->
+    <section class="roadmap" id="steps" aria-labelledby="roadmap-heading">
+      <div class="container">
+        <h2 id="roadmap-heading" class="section-label">The Process at a Glance</h2>
+        <div class="roadmap-steps">
+          <div class="roadmap-item">
+            <div class="roadmap-icon" aria-hidden="true">
+              <!-- Document SVG -->
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="5" y="2" width="18" height="24" rx="3" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+                <rect x="9" y="9" width="10" height="2" rx="1" fill="#2563EB"/>
+                <rect x="9" y="13" width="8" height="2" rx="1" fill="#93C5FD"/>
+                <rect x="9" y="17" width="9" height="2" rx="1" fill="#93C5FD"/>
+                <rect x="14" y="2" width="7" height="7" rx="1" fill="#BFDBFE"/>
+              </svg>
+            </div>
+            <span class="roadmap-step-num">1</span>
+            <span class="roadmap-step-label">Form LLC</span>
+          </div>
+          <div class="roadmap-connector" aria-hidden="true"></div>
+          <div class="roadmap-item">
+            <div class="roadmap-icon" aria-hidden="true">
+              <!-- ID card SVG -->
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="7" width="24" height="14" rx="3" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+                <circle cx="9" cy="14" r="3" fill="#93C5FD"/>
+                <rect x="15" y="11" width="8" height="2" rx="1" fill="#2563EB"/>
+                <rect x="15" y="15" width="6" height="2" rx="1" fill="#93C5FD"/>
+              </svg>
+            </div>
+            <span class="roadmap-step-num">2</span>
+            <span class="roadmap-step-label">Get EIN</span>
+          </div>
+          <div class="roadmap-connector" aria-hidden="true"></div>
+          <div class="roadmap-item">
+            <div class="roadmap-icon" aria-hidden="true">
+              <!-- Shield SVG -->
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 3 L24 7 L24 15 C24 20 19 24 14 26 C9 24 4 20 4 15 L4 7 Z" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+                <path d="M10 14 L13 17 L18 11" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+            </div>
+            <span class="roadmap-step-num">3</span>
+            <span class="roadmap-step-label">File BOI</span>
+          </div>
+          <div class="roadmap-connector" aria-hidden="true"></div>
+          <div class="roadmap-item">
+            <div class="roadmap-icon" aria-hidden="true">
+              <!-- Bank SVG -->
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="22" width="22" height="3" rx="1" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+                <rect x="5" y="13" width="4" height="9" rx="1" fill="#93C5FD"/>
+                <rect x="12" y="11" width="4" height="11" rx="1" fill="#2563EB"/>
+                <rect x="19" y="15" width="4" height="7" rx="1" fill="#93C5FD"/>
+                <path d="M4 11 L14 5 L24 11" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="roadmap-step-num">4</span>
+            <span class="roadmap-step-label">Open Bank Account</span>
+          </div>
+          <div class="roadmap-connector" aria-hidden="true"></div>
+          <div class="roadmap-item">
+            <div class="roadmap-icon" aria-hidden="true">
+              <!-- Checklist SVG -->
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="3" width="20" height="22" rx="3" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+                <path d="M9 10 L11 12 L15 8" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <rect x="17" y="10" width="5" height="2" rx="1" fill="#93C5FD"/>
+                <path d="M9 16 L11 18 L15 14" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <rect x="17" y="16" width="5" height="2" rx="1" fill="#93C5FD"/>
+                <rect x="9" y="21" width="13" height="2" rx="1" fill="#BFDBFE"/>
+              </svg>
+            </div>
+            <span class="roadmap-step-num">5</span>
+            <span class="roadmap-step-label">Stay Compliant</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 3: STEP 1 — WHY WYOMING
+    ============================================= -->
+    <section class="guide-section" id="why-wyoming" aria-labelledby="why-wyoming-heading">
+      <div class="container">
+        <div class="step-tag">Step 1</div>
+        <h2 id="why-wyoming-heading">Why Many Foreign Founders Choose Wyoming</h2>
+        <div class="section-body">
+          <p>
+            Wyoming is a popular starting point for non-U.S. residents who want a simple, affordable U.S. LLC.
+            It is not the only option, but it is one of the most commonly recommended for online businesses
+            and e-commerce sellers.
+          </p>
+          <p>Here are a few reasons why:</p>
+          <ul class="feature-list">
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>
+                <strong>Simple formation process.</strong>
+                The paperwork is minimal and the state is straightforward to work with.
+              </div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>
+                <strong>Relatively low yearly fees.</strong>
+                Wyoming's annual report fee is among the lowest of any U.S. state.
+              </div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>
+                <strong>Privacy.</strong>
+                Wyoming does not require member or manager names to be listed in public state records.
+              </div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>
+                <strong>Common choice for online businesses.</strong>
+                Many freelancers, e-commerce sellers, and remote service providers use Wyoming LLCs.
+              </div>
+            </li>
+          </ul>
+          <div class="info-note">
+            <strong>Note:</strong> Other states like Delaware or New Mexico can also work well depending on your situation.
+            Wyoming is simply a common starting point. If you have specific tax or legal concerns, consider speaking
+            with a professional.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 4: STEP 2 — NAME SEARCH
+    ============================================= -->
+    <section class="guide-section alt-bg" id="name-search" aria-labelledby="name-search-heading">
+      <div class="container">
+        <div class="step-tag">Step 2</div>
+        <h2 id="name-search-heading">Check If Your Company Name Is Available</h2>
+        <div class="section-body">
+          <p>
+            Before you form your LLC, you need to confirm that your preferred company name is available in Wyoming.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>Your name must include <strong>LLC</strong> or <strong>Limited Liability Company</strong> at the end.</div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>The name must not already be registered or too similar to an existing Wyoming business.</div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>You can search the Wyoming Secretary of State database for free.</div>
+            </li>
+          </ul>
+          <a
+            href="https://example.com/wyoming-name-search"
+            class="btn btn-outline"
+            target="_blank"
+            rel="noopener noreferrer"
+            <!-- REPLACE: update this URL to the actual Wyoming SOS name search tool -->
+          >
+            Search Wyoming Business Names ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 5: STEP 3 — REGISTERED AGENT
+    ============================================= -->
+    <section class="guide-section" id="registered-agent" aria-labelledby="registered-agent-heading">
+      <div class="container">
+        <div class="step-tag">Step 3</div>
+        <h2 id="registered-agent-heading">Choose a Registered Agent</h2>
+        <div class="section-body">
+          <p>
+            Wyoming requires every LLC to have a registered agent — a person or company with a physical address
+            in Wyoming who can receive official mail and legal notices on behalf of your business.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>The registered agent must have a physical Wyoming address (P.O. boxes are not allowed).</div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>They receive state correspondence and any legal service of process on your behalf.</div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>Most foreign founders use a professional registered agent service rather than a personal contact.</div>
+            </li>
+          </ul>
+
+          <!-- AFFILIATE NOTE: This is the registered agent affiliate card -->
+          <div class="affiliate-card">
+            <div class="affiliate-card-inner">
+              <div class="affiliate-icon" aria-hidden="true">
+                <!-- Building/agent icon -->
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="10" width="24" height="20" rx="3" fill="#DBEAFE"/>
+                  <rect x="10" y="16" width="5" height="5" rx="1" fill="#93C5FD"/>
+                  <rect x="17" y="16" width="5" height="5" rx="1" fill="#93C5FD"/>
+                  <rect x="12" y="24" width="8" height="6" rx="1" fill="#2563EB"/>
+                  <path d="M4 12 L16 4 L28 12" fill="#BFDBFE" stroke="#2563EB" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <p class="affiliate-card-text">
+                  If you want a straightforward option, this is the registered agent service I recommend.
+                  They handle Wyoming filings and keep things simple for foreign founders.
+                </p>
+                <!-- REPLACE: Update href to your actual affiliate link for the registered agent service -->
+                <!-- AFFILIATE LINK PLACEHOLDER: registered agent -->
+                <a
+                  href="https://example.com/affiliate-registered-agent"
+                  class="btn btn-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Registered Agent Option ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 6: STEP 4 — FORM THE LLC
+    ============================================= -->
+    <section class="guide-section alt-bg" id="form-llc" aria-labelledby="form-llc-heading">
+      <div class="container">
+        <div class="step-tag">Step 4</div>
+        <h2 id="form-llc-heading">Form the Wyoming LLC</h2>
+        <div class="section-body">
+          <p>
+            Once you have a registered agent, you can form the LLC. The registered agent or a filing service
+            usually submits the Articles of Organization to the Wyoming Secretary of State on your behalf.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div><strong>Company name</strong> — must include LLC or Limited Liability Company.</div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div><strong>Registered agent details</strong> — their Wyoming address.</div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div><strong>Mailing address</strong> — this can be your own address, even outside the U.S.</div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div><strong>State filing fee</strong> — typically around $100.</div>
+            </li>
+          </ul>
+          <p>
+            Processing is usually quick. Many filings are completed within a few business days.
+            Once approved, you will receive your Articles of Organization — keep this document safe.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 7: STEP 5 — FORM SS-4
+    ============================================= -->
+    <section class="guide-section" id="form-ss4" aria-labelledby="form-ss4-heading">
+      <div class="container">
+        <div class="step-tag">Step 5</div>
+        <h2 id="form-ss4-heading">Fill Out IRS Form SS-4</h2>
+        <div class="section-body">
+          <p>
+            After your LLC is formed, the next step is getting an EIN (Employer Identification Number) from the IRS.
+            An EIN is like a tax ID number for your business — you need it to open a bank account, hire employees,
+            and file U.S. taxes.
+          </p>
+          <p>
+            Foreign owners generally cannot use the IRS online EIN system. Instead, you request your EIN using
+            <strong>IRS Form SS-4</strong>. Fill this out before contacting the IRS.
+          </p>
+
+          <!-- SS-4 fields table card -->
+          <div class="info-card">
+            <h3 class="info-card-title">
+              <span aria-hidden="true">
+                <!-- Form icon -->
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;margin-right:6px">
+                  <rect x="3" y="1" width="14" height="18" rx="2" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.2"/>
+                  <rect x="6" y="6" width="8" height="1.5" rx="0.75" fill="#2563EB"/>
+                  <rect x="6" y="9.5" width="6" height="1.5" rx="0.75" fill="#93C5FD"/>
+                  <rect x="6" y="13" width="7" height="1.5" rx="0.75" fill="#93C5FD"/>
+                </svg>
+              </span>
+              Common SS-4 Fields
+            </h3>
+            <table class="ss4-table" aria-label="Common SS-4 form fields">
+              <thead>
+                <tr>
+                  <th scope="col">Field</th>
+                  <th scope="col">What to enter</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Company name</td>
+                  <td>Your full LLC name including "LLC"</td>
+                </tr>
+                <tr>
+                  <td>Responsible party</td>
+                  <td>Your full legal name (the owner)</td>
+                </tr>
+                <tr>
+                  <td>Mailing address</td>
+                  <td>Your address (can be outside the U.S.)</td>
+                </tr>
+                <tr>
+                  <td>Number of members</td>
+                  <td>Usually 1 for a single-member LLC</td>
+                </tr>
+                <tr>
+                  <td>Reason for applying</td>
+                  <td>Started new business</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            Download Form SS-4 directly from the IRS website. Fill it out completely before moving to the next step.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 8: STEP 6 — GET YOUR EIN
+    ============================================= -->
+    <section class="guide-section alt-bg" id="get-ein" aria-labelledby="get-ein-heading">
+      <div class="container">
+        <div class="step-tag">Step 6</div>
+        <h2 id="get-ein-heading">Get Your EIN From the IRS</h2>
+        <div class="section-body">
+          <p>
+            You have a few options for submitting your SS-4 to the IRS. Here is a plain summary of each.
+          </p>
+
+          <div class="options-grid">
+
+            <!-- Option 1: Fax -->
+            <div class="option-card">
+              <div class="option-card-header">
+                <span class="option-icon" aria-hidden="true">
+                  <!-- Fax/document icon -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="7" width="18" height="14" rx="2" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.3"/>
+                    <rect x="7" y="3" width="10" height="6" rx="1" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.2"/>
+                    <rect x="7" y="13" width="10" height="2" rx="1" fill="#93C5FD"/>
+                    <rect x="7" y="16" width="7" height="2" rx="1" fill="#BFDBFE"/>
+                    <circle cx="17" cy="10" r="1.5" fill="#2563EB"/>
+                  </svg>
+                </span>
+                <h3>Option 1: Fax the SS-4</h3>
+              </div>
+              <p>
+                You can fax the completed SS-4 to the IRS. This is usually the simplest option, but processing
+                can take several weeks. You will receive your EIN by fax or mail.
+              </p>
+            </div>
+
+            <!-- Option 2: Call yourself -->
+            <div class="option-card">
+              <div class="option-card-header">
+                <span class="option-icon" aria-hidden="true">
+                  <!-- Phone icon -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 3C5.4 3 5 3.4 5 4V20C5 20.6 5.4 21 6 21H18C18.6 21 19 20.6 19 20V4C19 3.4 18.6 3 18 3H6Z" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.3"/>
+                    <circle cx="12" cy="18" r="1" fill="#2563EB"/>
+                    <rect x="9" y="5" width="6" height="1.5" rx="0.75" fill="#93C5FD"/>
+                  </svg>
+                </span>
+                <h3>Option 2: Call the IRS Yourself</h3>
+              </div>
+              <p>
+                The IRS also issues EINs by phone. An IRS agent will ask the same questions shown on your SS-4.
+                If approved during the call, you receive your EIN immediately.
+              </p>
+              <div class="tips-block">
+                <p class="tips-label">Tips for the call:</p>
+                <ul>
+                  <li>Have your completed SS-4 in front of you</li>
+                  <li>Spell names and addresses slowly and clearly</li>
+                  <li>Use phonetic spelling if needed (A for Alpha, B for Bravo)</li>
+                  <li>Be patient — wait times can be long</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Option 3: Fiverr service -->
+            <div class="option-card option-card--highlight">
+              <div class="option-card-header">
+                <span class="option-icon" aria-hidden="true">
+                  <!-- Headset/service icon -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4C8 4 5 7 5 11V15H6C6.6 15 7 15.4 7 16V19C7 19.6 6.6 20 6 20H5C3.9 20 3 19.1 3 18V11C3 6.6 7.1 3 12 3C16.9 3 21 6.6 21 11V18C21 19.1 20.1 20 19 20H18C17.4 20 17 19.6 17 19V16C17 15.4 17.4 15 18 15H19V11C19 7 16 4 12 4Z" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.2"/>
+                  </svg>
+                </span>
+                <h3>Option 3: Have Me Handle the Call</h3>
+              </div>
+              <p>
+                If you want your EIN faster but don't want to deal with the IRS phone process,
+                I offer a service where I help manage the call on your behalf.
+              </p>
+              <!-- REPLACE: Update href to your actual Fiverr gig URL -->
+              <!-- FIVERR LINK PLACEHOLDER: EIN phone service -->
+              <a
+                href="https://example.com/fiverr-ein-service"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View EIN Phone Service ↗
+              </a>
+            </div>
+
+          </div><!-- end options-grid -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 9: STEP 7 — BOI REPORT
+    ============================================= -->
+    <section class="guide-section" id="boi-report" aria-labelledby="boi-report-heading">
+      <div class="container">
+        <div class="step-tag">Step 7</div>
+        <h2 id="boi-report-heading">File Your BOI Report</h2>
+        <div class="section-body">
+          <p>
+            Many new U.S. companies are required to file a <strong>Beneficial Ownership Information (BOI) report</strong>
+            with FinCEN (the Financial Crimes Enforcement Network), a bureau of the U.S. Treasury Department.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>The filing is done through the FinCEN website — it is typically free.</div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>You will provide basic company details and information about the beneficial owners (usually you).</div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>The process is usually straightforward if your LLC structure is simple.</div>
+            </li>
+          </ul>
+          <div class="info-note">
+            <strong>Important:</strong> BOI reporting rules are relatively new and details may change. Make sure
+            to verify current deadlines and requirements directly with FinCEN or a professional.
+            This guide is educational — not legal advice.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 10: STEP 8 — BANK ACCOUNT
+    ============================================= -->
+    <section class="guide-section alt-bg" id="bank-account" aria-labelledby="bank-account-heading">
+      <div class="container">
+        <div class="step-tag">Step 8</div>
+        <h2 id="bank-account-heading">Open a U.S. Business Bank Account</h2>
+        <div class="section-body">
+          <p>
+            Once you have your EIN, you can apply for a U.S. business bank account. Several providers
+            now accept remote applications from non-U.S. residents, which makes this step easier than it used to be.
+          </p>
+          <p>Common documents you will likely need:</p>
+          <ul class="feature-list">
+            <li><span class="check-icon" aria-hidden="true">✓</span><div>Your LLC Articles of Organization</div></li>
+            <li><span class="check-icon" aria-hidden="true">✓</span><div>Your EIN confirmation letter from the IRS</div></li>
+            <li><span class="check-icon" aria-hidden="true">✓</span><div>A valid government-issued ID (passport)</div></li>
+            <li><span class="check-icon" aria-hidden="true">✓</span><div>Sometimes: an Operating Agreement for your LLC</div></li>
+          </ul>
+
+          <h3 class="sub-heading">Some Online-Friendly Providers to Research</h3>
+          <p class="sub-note">These are commonly mentioned options. Requirements change — always verify directly with the provider.</p>
+
+          <div class="bank-cards">
+            <div class="bank-card">
+              <div class="bank-card-icon" aria-hidden="true">
+                <!-- Generic bank icon -->
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="24" width="22" height="2" rx="1" fill="#2563EB"/>
+                  <rect x="5" y="13" width="4" height="11" rx="1" fill="#93C5FD"/>
+                  <rect x="12" y="10" width="4" height="14" rx="1" fill="#2563EB"/>
+                  <rect x="19" y="16" width="4" height="8" rx="1" fill="#93C5FD"/>
+                  <path d="M3 11 L14 4 L25 11" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.3" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="bank-card-name">Mercury</span>
+              <span class="bank-card-note">Online bank, popular with startups and remote founders</span>
+            </div>
+            <div class="bank-card">
+              <div class="bank-card-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="24" width="22" height="2" rx="1" fill="#2563EB"/>
+                  <rect x="5" y="13" width="4" height="11" rx="1" fill="#93C5FD"/>
+                  <rect x="12" y="10" width="4" height="14" rx="1" fill="#2563EB"/>
+                  <rect x="19" y="16" width="4" height="8" rx="1" fill="#93C5FD"/>
+                  <path d="M3 11 L14 4 L25 11" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.3" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="bank-card-name">Wise Business</span>
+              <span class="bank-card-note">Multi-currency account, good for international payments</span>
+            </div>
+            <div class="bank-card">
+              <div class="bank-card-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="24" width="22" height="2" rx="1" fill="#2563EB"/>
+                  <rect x="5" y="13" width="4" height="11" rx="1" fill="#93C5FD"/>
+                  <rect x="12" y="10" width="4" height="14" rx="1" fill="#2563EB"/>
+                  <rect x="19" y="16" width="4" height="8" rx="1" fill="#93C5FD"/>
+                  <path d="M3 11 L14 4 L25 11" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.3" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="bank-card-name">Relay</span>
+              <span class="bank-card-note">Business banking focused on small businesses and LLCs</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 11: STEP 9 — ONGOING COMPLIANCE
+    ============================================= -->
+    <section class="guide-section" id="compliance" aria-labelledby="compliance-heading">
+      <div class="container">
+        <div class="step-tag">Step 9</div>
+        <h2 id="compliance-heading">Understand Basic Ongoing Compliance</h2>
+        <div class="section-body">
+          <p>
+            Forming the LLC is just the beginning. There are a few ongoing requirements to keep your company in good standing.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>
+                <strong>Wyoming Annual Report.</strong>
+                Due each year. The fee is minimal (calculated based on assets in Wyoming, with a low minimum).
+                Missing this can put your LLC out of good standing.
+              </div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>
+                <strong>BOI Updates.</strong>
+                If your company details or ownership changes, you may need to update your BOI filing with FinCEN.
+              </div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <div>
+                <strong>IRS Informational Filings.</strong>
+                Foreign-owned single-member LLCs may need to file Form 5472 and a pro forma Form 1120 with the IRS each year.
+                This applies even if the LLC had no income. Consult a tax professional if you are unsure.
+              </div>
+            </li>
+          </ul>
+          <p>
+            To make tracking these easier, download the free checklist below. It covers all the main setup and compliance steps in one simple document.
+          </p>
+          <a href="#checklist" class="btn btn-outline">Get the Free Checklist →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 12: EMAIL CAPTURE
+    ============================================= -->
+    <section class="checklist-section" id="checklist" aria-labelledby="checklist-heading">
+      <div class="container">
+        <div class="checklist-inner">
+          <div class="checklist-icon" aria-hidden="true">
+            <!-- Checklist SVG icon -->
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="4" width="36" height="40" rx="5" fill="#DBEAFE"/>
+              <path d="M16 18 L20 22 L28 14" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <rect x="30" y="17" width="10" height="3" rx="1.5" fill="#93C5FD"/>
+              <path d="M16 27 L20 31 L28 23" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <rect x="30" y="26" width="10" height="3" rx="1.5" fill="#93C5FD"/>
+              <rect x="16" y="35" width="24" height="3" rx="1.5" fill="#BFDBFE"/>
+            </svg>
+          </div>
+          <h2 id="checklist-heading">Free Foreign Founder Compliance Checklist</h2>
+          <p class="checklist-description">
+            To make this easier, I created a simple checklist covering the main setup and compliance steps.
+            Enter your name and email below and I'll send it straight to you.
+          </p>
+
+          <div class="checklist-preview">
+            <p class="checklist-preview-label">The checklist covers:</p>
+            <ul>
+              <li>
+                <span aria-hidden="true">✓</span>
+                LLC formation overview and key documents
+              </li>
+              <li>
+                <span aria-hidden="true">✓</span>
+                SS-4 and EIN notes and tips
+              </li>
+              <li>
+                <span aria-hidden="true">✓</span>
+                BOI filing reminder and key details
+              </li>
+              <li>
+                <span aria-hidden="true">✓</span>
+                Bank account requirements by provider
+              </li>
+              <li>
+                <span aria-hidden="true">✓</span>
+                Basic compliance calendar (annual report, 5472, BOI)
+              </li>
+            </ul>
+          </div>
+
+          <!--
+            EMAIL FORM — REPLACE ACTION URL
+            ============================================================
+            Replace the form action with your actual email service endpoint.
+            Common options:
+              - ConvertKit: https://app.convertkit.com/forms/YOUR_FORM_ID/subscriptions
+              - Mailchimp: get the POST URL from your Mailchimp embedded form code
+              - Formspree: https://formspree.io/f/YOUR_FORM_ID
+              - Beehiiv, MailerLite, etc. — each has its own form embed URL
+            
+            Also update the input field names to match what your email service expects.
+            For ConvertKit: name="first_name" and name="email_address"
+            For Mailchimp: name="FNAME" and name="EMAIL"
+            ============================================================
+          -->
+          <form
+            class="email-form"
+            action="https://example.com/your-email-form-action"
+            method="POST"
+            id="checklist-form"
+          >
+            <!-- REPLACE: add a hidden field if your email service requires one (e.g. Formspree _subject) -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name">Your first name</label>
+                <!-- REPLACE: update name attribute to match your email service (e.g. first_name, FNAME) -->
+                <input
+                  type="text"
+                  id="form-name"
+                  name="first_name"
+                  placeholder="First name"
+                  required
+                  autocomplete="given-name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="form-email">Your email address</label>
+                <!-- REPLACE: update name attribute to match your email service (e.g. email_address, EMAIL) -->
+                <input
+                  type="email"
+                  id="form-email"
+                  name="email_address"
+                  placeholder="you@example.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Me the Checklist</button>
+            <p class="form-privacy">
+              No spam. Just practical updates and resources.
+            </p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 13: FAQ
+    ============================================= -->
+    <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              aria-controls="faq-1-answer"
+              id="faq-1"
+            >
+              Do foreigners need a Social Security Number to get an EIN?
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 7 L9 12 L14 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-1-answer" role="region" aria-labelledby="faq-1" hidden>
+              <p>
+                No. Non-U.S. residents without an SSN or ITIN can still obtain an EIN. The standard method for
+                foreign owners is to submit Form SS-4 by fax or phone rather than using the IRS online system,
+                which requires a U.S. SSN or ITIN.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              aria-controls="faq-2-answer"
+              id="faq-2"
+            >
+              How long does it take to get an EIN?
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 7 L9 12 L14 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-2-answer" role="region" aria-labelledby="faq-2" hidden>
+              <p>
+                It depends on the method. By phone, you can receive your EIN during the same call if everything is in order.
+                By fax, the IRS typically responds within a few weeks, though this can vary with processing times.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              aria-controls="faq-3-answer"
+              id="faq-3"
+            >
+              Can I open a U.S. business bank account remotely?
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 7 L9 12 L14 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-3-answer" role="region" aria-labelledby="faq-3" hidden>
+              <p>
+                Yes, several online-friendly U.S. banks and financial service providers accept remote applications
+                from non-U.S. residents. Mercury, Wise, and Relay are commonly mentioned options. Requirements vary,
+                so check each provider's current policies before applying.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              aria-controls="faq-4-answer"
+              id="faq-4"
+            >
+              Do I need a registered agent in Wyoming?
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 7 L9 12 L14 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-4-answer" role="region" aria-labelledby="faq-4" hidden>
+              <p>
+                Yes. Wyoming state law requires all LLCs to maintain a registered agent with a physical address in Wyoming.
+                Since most foreign founders do not have a Wyoming address, using a professional registered agent service
+                is the standard approach.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              aria-controls="faq-5-answer"
+              id="faq-5"
+            >
+              Is Wyoming the only state I can use?
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 7 L9 12 L14 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-5-answer" role="region" aria-labelledby="faq-5" hidden>
+              <p>
+                No. Other states like Delaware and New Mexico are also popular choices for foreign founders.
+                Wyoming is commonly recommended because of its low fees, privacy, and simple process — but
+                the best state for you may depend on your specific situation. If you have complex tax or legal
+                questions, it is worth speaking with a professional.
+              </p>
+            </div>
+          </div>
+
+        </div><!-- end faq-list -->
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 14: FINAL CTA
+    ============================================= -->
+    <section class="final-cta" id="start" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">Ready to Start?</h2>
+        <p>
+          Starting a U.S. LLC as a foreign founder can feel confusing at first, but once the steps are clear,
+          the process is manageable. Use this guide, download the checklist, and take it one step at a time.
+        </p>
+        <div class="cta-actions">
+          <!-- REPLACE: Update href to your actual affiliate link for the registered agent service -->
+          <!-- AFFILIATE LINK PLACEHOLDER: registered agent (footer CTA) -->
+          <a
+            href="https://example.com/affiliate-registered-agent"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Recommended Registered Agent ↗
+          </a>
+          <a href="#checklist" class="btn btn-secondary">Get the Free Checklist</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <!-- REPLACE: Update site name/brand if you have one -->
+          <span class="footer-title">Wyoming LLC Guide</span>
+          <p class="footer-disclaimer">
+            This guide is for educational purposes only and is not legal or tax advice.
+            Consult a qualified professional before making business or tax decisions.
+          </p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#why-wyoming">Why Wyoming</a>
+          <a href="#form-llc">Form LLC</a>
+          <a href="#get-ein">Get EIN</a>
+          <a href="#boi-report">File BOI</a>
+          <a href="#bank-account">Bank Account</a>
+          <a href="#checklist">Free Checklist</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <!-- Copyright year is set dynamically by script.js -->
+        <p class="footer-copy">
+          &copy; <span id="copyright-year"></span> Wyoming LLC Guide. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
