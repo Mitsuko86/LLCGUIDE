@@ -10,6 +10,77 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ===== SS-4 EXAMPLE ===== */
+    .ss4-example-wrap { margin-top: 2rem; }
+    .ss4-example-header { display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem; flex-wrap:wrap; }
+    .ss4-example-badge { display:inline-flex; align-items:center; gap:0.35rem; background:#FEF9C3; border:1px solid #FDE047; border-radius:999px; padding:0.25rem 0.75rem; font-size:0.75rem; font-weight:700; color:#854D0E; }
+    .ss4-example-disclaimer { font-size:0.8125rem; color:#6B7280; font-style:italic; }
+
+    .ss4-example-img-wrap { position:relative; cursor:zoom-in; border:1px solid #E2E8F0; border-radius:12px; overflow:hidden; box-shadow:0 4px 16px rgba(15,23,42,0.08); max-height:480px; transition:box-shadow 0.2s ease; }
+    .ss4-example-img-wrap:hover { box-shadow:0 8px 28px rgba(37,99,235,0.15); }
+    .ss4-example-img-wrap::after { content:''; position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(to bottom,transparent,rgba(248,250,252,0.95)); pointer-events:none; }
+
+    .ss4-enlarge-hint { position:absolute; top:12px; right:12px; z-index:10; background:rgba(37,99,235,0.85); color:#fff; padding:0.35rem 0.75rem; border-radius:999px; font-size:0.75rem; font-weight:600; display:flex; align-items:center; gap:0.4rem; pointer-events:none; }
+
+    .ss4-form-render { font-family:Arial,sans-serif; font-size:0.72rem; background:#fff; position:relative; line-height:1.3; color:#111; }
+    .ss4-disclaimer-bar { background:#FEF9C3; border-bottom:1px solid #FDE047; padding:0.4rem 1rem; font-size:0.7rem; font-weight:600; color:#854D0E; text-align:center; }
+
+    .ss4-form-header { display:flex; border-bottom:2px solid #000; }
+    .ss4-form-header-left { padding:0.5rem; border-right:1px solid #999; min-width:90px; }
+    .ss4-form-num { font-size:1rem; }
+    .ss4-form-num strong { font-size:1.4rem; }
+    .ss4-form-rev,.ss4-form-dept { font-size:0.6rem; color:#444; margin-top:2px; }
+    .ss4-form-header-center { flex:1; padding:0.5rem; text-align:center; border-right:1px solid #999; }
+    .ss4-form-title { font-weight:700; font-size:0.875rem; margin-bottom:4px; }
+    .ss4-form-subtitle { font-size:0.6rem; color:#333; line-height:1.4; }
+    .ss4-form-header-right { padding:0.5rem; min-width:80px; }
+    .ss4-omb { font-size:0.6rem; margin-bottom:4px; }
+    .ss4-ein-box { border:1px solid #000; padding:0.3rem 0.5rem; font-weight:700; font-size:0.75rem; min-height:28px; }
+
+    .ss4-fields { border:1px solid #999; border-top:none; }
+    .ss4-field { border-bottom:1px solid #ccc; padding:0.35rem 0.5rem; position:relative; background:#fff; }
+    .ss4-field--highlight { background:#FFFDE7; border-left:3px solid #FACC15; }
+    .ss4-field--full { display:block; }
+    .ss4-field-row { display:flex; }
+    .ss4-field-row .ss4-field { border-right:1px solid #ccc; flex:1; }
+    .ss4-field-row .ss4-field:last-child { border-right:none; }
+    .ss4-field--half { flex:1; }
+    .ss4-field--two-thirds { flex:2; }
+    .ss4-field--third { flex:1; }
+
+    .ss4-field-label { font-size:0.62rem; color:#555; margin-bottom:3px; }
+    .ss4-field-value { min-height:18px; font-size:0.72rem; }
+    .ss4-handprint { font-weight:700; color:#1a1a1a; letter-spacing:0.04em; font-size:0.78rem; }
+    .ss4-handwriting { font-family:'Caveat',cursive; font-size:1.05rem; font-weight:600; color:#1a1a1a; }
+    .ss4-checkbox { font-size:0.8rem; }
+    .ss4-checkbox--checked { color:#1D4ED8; font-weight:700; }
+
+    .ss4-arrow-label { position:absolute; font-size:0.6rem; font-weight:700; color:#1D4ED8; background:#EFF6FF; border:1px solid #BFDBFE; border-radius:4px; padding:2px 5px; white-space:nowrap; z-index:5; }
+    .ss4-arrow-label::before { content:'→ '; }
+    .ss4-arrow-label--right { right:0.5rem; top:50%; transform:translateY(-50%); }
+    .ss4-arrow-label--below { bottom:3px; left:0.5rem; }
+
+    .ss4-field--signature { padding-bottom:1rem; }
+    .ss4-sig-row { display:flex; gap:1.5rem; flex-wrap:wrap; margin-top:4px; }
+    .ss4-sig-block { flex:1; min-width:120px; }
+
+    .ss4-watermark { position:absolute; bottom:8px; right:10px; font-size:0.65rem; font-weight:700; color:rgba(37,99,235,0.3); letter-spacing:0.05em; pointer-events:none; z-index:10; }
+    .ss4-example-caption { font-size:0.8125rem; color:#6B7280; margin-top:0.75rem; text-align:center; }
+
+    /* ===== LIGHTBOX ===== */
+    .ss4-lightbox { position:fixed; inset:0; z-index:1000; display:flex; align-items:center; justify-content:center; }
+    .ss4-lightbox[hidden] { display:none; }
+    .ss4-lightbox-backdrop { position:absolute; inset:0; background:rgba(15,23,42,0.78); backdrop-filter:blur(4px); cursor:zoom-out; }
+    .ss4-lightbox-inner { position:relative; z-index:1; width:92vw; max-width:860px; max-height:90vh; overflow-y:auto; border-radius:12px; box-shadow:0 24px 64px rgba(0,0,0,0.4); background:#fff; }
+    .ss4-lightbox-close { position:sticky; top:8px; float:right; z-index:10; background:#1F2937; color:#fff; border:none; width:32px; height:32px; border-radius:50%; font-size:0.875rem; cursor:pointer; margin:0.5rem; display:flex; align-items:center; justify-content:center; }
+    .ss4-lightbox-close:hover { background:#2563EB; }
+    .ss4-lightbox-content { padding:0 1rem 1.5rem; }
+    .ss4-lightbox-content .ss4-example-img-wrap { max-height:none; overflow-y:visible; cursor:default; }
+    .ss4-lightbox-content .ss4-example-img-wrap::after { display:none; }
+    .ss4-lightbox-content .ss4-enlarge-hint { display:none; }
+  </style>
 </head>
 <body>
 
@@ -419,9 +490,235 @@
     <p>
       <a href="https://www.irs.gov/pub/irs-pdf/fss4.pdf" target="_blank" rel="noopener noreferrer">Download Form SS-4</a>
       directly from the IRS website. Fill it out completely before moving to the next step.
-      Not sure how to fill it in? <a href="https://example.com/ss4-example" target="_blank" rel="noopener noreferrer">View an example completed SS-4 →</a>
+      See the annotated example below for guidance on which fields to complete.
     </p>
-    <!-- REPLACE: update the example SS-4 link above with your actual example URL -->
+
+    <!-- =============================================
+         SS-4 ANNOTATED EXAMPLE
+         Inline SVG — no external image needed.
+         Click image opens lightbox for full-size view.
+    ============================================= -->
+    <div class="ss4-example-wrap">
+      <div class="ss4-example-header">
+        <span class="ss4-example-badge">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><circle cx="6.5" cy="6.5" r="6" fill="#FEF08A" stroke="#CA8A04" stroke-width="1"/><path d="M6.5 3.5V7" stroke="#92400E" stroke-width="1.4" stroke-linecap="round"/><circle cx="6.5" cy="9" r="0.7" fill="#92400E"/></svg>
+          Example only
+        </span>
+        <span class="ss4-example-disclaimer">Entries will vary based on your situation. Not legal or tax advice.</span>
+      </div>
+
+      <div class="ss4-example-img-wrap" id="ss4-example" role="button" tabindex="0" aria-label="Click to enlarge SS-4 example" title="Click to enlarge">
+        <div class="ss4-enlarge-hint" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="white" stroke-width="1.5"/><path d="M11 11L14 14" stroke="white" stroke-width="1.5" stroke-linecap="round"/><path d="M5 7H9M7 5V9" stroke="white" stroke-width="1.4" stroke-linecap="round"/></svg>
+          Click to enlarge
+        </div>
+
+        <!-- THE ANNOTATED FORM — built with HTML/CSS, no image file required -->
+        <div class="ss4-form-render">
+
+          <!-- Disclaimer banner at top -->
+          <div class="ss4-disclaimer-bar">
+            Example only — entries will vary. Not legal or tax advice. &nbsp;|&nbsp; llcforforeigners.com
+          </div>
+
+          <!-- Form header -->
+          <div class="ss4-form-header">
+            <div class="ss4-form-header-left">
+              <div class="ss4-form-num">Form <strong>SS-4</strong></div>
+              <div class="ss4-form-rev">Rev. December 2025</div>
+              <div class="ss4-form-dept">Department of the Treasury<br>Internal Revenue Service</div>
+            </div>
+            <div class="ss4-form-header-center">
+              <div class="ss4-form-title">Application for Employer Identification Number</div>
+              <div class="ss4-form-subtitle">(For use by employers, corporations, partnerships, trusts, estates, churches,<br>government agencies, Indian tribal entities, certain individuals, and others.)</div>
+              <div class="ss4-form-subtitle">Go to <em>www.irs.gov/FormSS4</em> for instructions and the latest information.</div>
+            </div>
+            <div class="ss4-form-header-right">
+              <div class="ss4-omb">OMB No. 1545-0003</div>
+              <div class="ss4-ein-box"><span>EIN</span></div>
+            </div>
+          </div>
+
+          <!-- Field rows -->
+          <div class="ss4-fields">
+
+            <!-- Line 1 — Company name — HIGHLIGHTED -->
+            <div class="ss4-field ss4-field--highlight ss4-field--full">
+              <div class="ss4-field-label">1 &nbsp;Legal name of entity (or individual) for whom the EIN is being requested</div>
+              <div class="ss4-field-value ss4-handprint">EXAMPLE COMPANY LLC</div>
+              <div class="ss4-arrow-label ss4-arrow-label--right">Your LLC name</div>
+            </div>
+
+            <!-- Line 2 & 3 -->
+            <div class="ss4-field-row">
+              <div class="ss4-field ss4-field--half">
+                <div class="ss4-field-label">2 &nbsp;Trade name (if different)</div>
+                <div class="ss4-field-value">&nbsp;</div>
+              </div>
+              <div class="ss4-field ss4-field--half">
+                <div class="ss4-field-label">3 &nbsp;Executor, administrator, trustee, "care of" name</div>
+                <div class="ss4-field-value">&nbsp;</div>
+              </div>
+            </div>
+
+            <!-- Line 4a — Mailing address — HIGHLIGHTED -->
+            <div class="ss4-field-row">
+              <div class="ss4-field ss4-field--highlight ss4-field--half">
+                <div class="ss4-field-label">4a &nbsp;Mailing address (room, apt., suite no., and street, or P.O. box)</div>
+                <div class="ss4-field-value ss4-handprint">38 SMITH STREET</div>
+                <div class="ss4-arrow-label ss4-arrow-label--below">Your mailing address</div>
+              </div>
+              <div class="ss4-field ss4-field--half">
+                <div class="ss4-field-label">5a &nbsp;Street address (if different)</div>
+                <div class="ss4-field-value">&nbsp;</div>
+              </div>
+            </div>
+
+            <!-- Line 4b — City/State/ZIP — HIGHLIGHTED -->
+            <div class="ss4-field-row">
+              <div class="ss4-field ss4-field--highlight ss4-field--half">
+                <div class="ss4-field-label">4b &nbsp;City, state, and ZIP code (if foreign, see instructions)</div>
+                <div class="ss4-field-value ss4-handprint">TORONTO, ONTARIO, M6K 5X8</div>
+              </div>
+              <div class="ss4-field ss4-field--half">
+                <div class="ss4-field-label">5b &nbsp;City, state, and ZIP code (if foreign, see instructions)</div>
+                <div class="ss4-field-value">&nbsp;</div>
+              </div>
+            </div>
+
+            <!-- Line 6 — Country — HIGHLIGHTED -->
+            <div class="ss4-field ss4-field--highlight ss4-field--full">
+              <div class="ss4-field-label">6 &nbsp;County and state where principal business is located</div>
+              <div class="ss4-field-value ss4-handprint">CANADA</div>
+              <div class="ss4-arrow-label ss4-arrow-label--right">Your country</div>
+            </div>
+
+            <!-- Line 7a & 7b — HIGHLIGHTED -->
+            <div class="ss4-field-row">
+              <div class="ss4-field ss4-field--highlight ss4-field--half">
+                <div class="ss4-field-label">7a &nbsp;Name of responsible party</div>
+                <div class="ss4-field-value ss4-handprint">JOHN DOE</div>
+                <div class="ss4-arrow-label ss4-arrow-label--below">Your full legal name</div>
+              </div>
+              <div class="ss4-field ss4-field--highlight ss4-field--half">
+                <div class="ss4-field-label">7b &nbsp;SSN, ITIN, or EIN</div>
+                <div class="ss4-field-value ss4-handprint">FOREIGN</div>
+                <div class="ss4-arrow-label ss4-arrow-label--below">Write FOREIGN if you have no SSN/ITIN</div>
+              </div>
+            </div>
+
+            <!-- Line 8a — LLC checkbox — HIGHLIGHTED -->
+            <div class="ss4-field-row">
+              <div class="ss4-field ss4-field--highlight ss4-field--two-thirds">
+                <div class="ss4-field-label">8a &nbsp;Is this application for an LLC (or foreign equivalent)?</div>
+                <div class="ss4-field-value">
+                  <span class="ss4-checkbox ss4-checkbox--checked" aria-hidden="true">✓</span> Yes &nbsp;&nbsp;
+                  <span class="ss4-checkbox" aria-hidden="true">☐</span> No
+                </div>
+                <div class="ss4-arrow-label ss4-arrow-label--below">Check Yes</div>
+              </div>
+              <div class="ss4-field ss4-field--highlight ss4-field--third">
+                <div class="ss4-field-label">8b &nbsp;Number of LLC members</div>
+                <div class="ss4-field-value ss4-handprint">1</div>
+                <div class="ss4-arrow-label ss4-arrow-label--below">Usually 1</div>
+              </div>
+            </div>
+
+            <!-- Line 8c -->
+            <div class="ss4-field ss4-field--full">
+              <div class="ss4-field-label">8c &nbsp;If 8a is "Yes," was the LLC organized in the United States?</div>
+              <div class="ss4-field-value">
+                <span class="ss4-checkbox" aria-hidden="true">☐</span> Yes &nbsp;&nbsp;
+                <span class="ss4-checkbox ss4-checkbox--checked" aria-hidden="true">✓</span> No
+              </div>
+            </div>
+
+            <!-- Line 9a — Entity type — HIGHLIGHTED -->
+            <div class="ss4-field ss4-field--highlight ss4-field--full">
+              <div class="ss4-field-label">9a &nbsp;Type of entity — Other (specify):</div>
+              <div class="ss4-field-value ss4-handprint">Foreign-Owned U.S. Disregarded Entity</div>
+              <div class="ss4-arrow-label ss4-arrow-label--right">Use this for a foreign-owned single-member LLC</div>
+            </div>
+
+            <!-- Line 10 — Reason — HIGHLIGHTED -->
+            <div class="ss4-field ss4-field--highlight ss4-field--full">
+              <div class="ss4-field-label">10 &nbsp;Reason for applying</div>
+              <div class="ss4-field-value">
+                <span class="ss4-checkbox ss4-checkbox--checked" aria-hidden="true">✓</span>
+                <span class="ss4-handprint"> Started new business — ONLINE RETAIL OF CONSUMER GOODS</span>
+              </div>
+              <div class="ss4-arrow-label ss4-arrow-label--right">Describe your business type</div>
+            </div>
+
+            <!-- Line 11 & 12 — HIGHLIGHTED -->
+            <div class="ss4-field-row">
+              <div class="ss4-field ss4-field--highlight ss4-field--half">
+                <div class="ss4-field-label">11 &nbsp;Date business started (month, day, year)</div>
+                <div class="ss4-field-value ss4-handprint">MARCH 18, 2026</div>
+                <div class="ss4-arrow-label ss4-arrow-label--below">Date your LLC was formed</div>
+              </div>
+              <div class="ss4-field ss4-field--highlight ss4-field--half">
+                <div class="ss4-field-label">12 &nbsp;Closing month of accounting year</div>
+                <div class="ss4-field-value ss4-handprint">DECEMBER</div>
+                <div class="ss4-arrow-label ss4-arrow-label--below">Usually December</div>
+              </div>
+            </div>
+
+            <!-- Line 18 — HIGHLIGHTED -->
+            <div class="ss4-field ss4-field--highlight ss4-field--full">
+              <div class="ss4-field-label">18 &nbsp;Has the applicant entity previously received an EIN?</div>
+              <div class="ss4-field-value">
+                <span class="ss4-checkbox" aria-hidden="true">☐</span> Yes &nbsp;&nbsp;
+                <span class="ss4-checkbox ss4-checkbox--checked" aria-hidden="true">✓</span> No
+              </div>
+              <div class="ss4-arrow-label ss4-arrow-label--right">Check No for a new LLC</div>
+            </div>
+
+            <!-- Signature — HIGHLIGHTED -->
+            <div class="ss4-field ss4-field--highlight ss4-field--full ss4-field--signature">
+              <div class="ss4-field-label">Signature &amp; Date</div>
+              <div class="ss4-sig-row">
+                <div class="ss4-sig-block">
+                  <div class="ss4-field-label" style="font-size:0.7rem;">Name and title</div>
+                  <div class="ss4-field-value ss4-handwriting">John Doe (Owner)</div>
+                </div>
+                <div class="ss4-sig-block">
+                  <div class="ss4-field-label" style="font-size:0.7rem;">Date</div>
+                  <div class="ss4-field-value ss4-handwriting">March 18, 2026</div>
+                </div>
+                <div class="ss4-sig-block ss4-sig-block--phone">
+                  <div class="ss4-field-label" style="font-size:0.7rem;">Telephone number</div>
+                  <div class="ss4-field-value ss4-handprint" style="font-size:0.8rem;">1-999-111-1111</div>
+                </div>
+              </div>
+              <div class="ss4-arrow-label ss4-arrow-label--right">Sign and date the form</div>
+            </div>
+
+          </div><!-- end ss4-fields -->
+
+          <!-- Watermark -->
+          <div class="ss4-watermark" aria-hidden="true">llcforforeigners.com</div>
+
+        </div><!-- end ss4-form-render -->
+      </div><!-- end ss4-example-img-wrap -->
+
+      <p class="ss4-example-caption">
+        This is a sample only. Your entries will differ. &nbsp;
+        <a href="https://www.irs.gov/pub/irs-pdf/fss4.pdf" target="_blank" rel="noopener noreferrer">Download the blank SS-4 form →</a>
+      </p>
+    </div><!-- end ss4-example-wrap -->
+
+    <!-- LIGHTBOX — click image to enlarge -->
+    <div class="ss4-lightbox" id="ss4-lightbox" role="dialog" aria-modal="true" aria-label="SS-4 example enlarged" hidden>
+      <div class="ss4-lightbox-backdrop" id="ss4-lightbox-backdrop"></div>
+      <div class="ss4-lightbox-inner">
+        <button class="ss4-lightbox-close" id="ss4-lightbox-close" aria-label="Close enlarged view">✕</button>
+        <div class="ss4-lightbox-content" id="ss4-lightbox-content">
+          <!-- JS clones the form into here on open -->
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -899,5 +1196,41 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+  // ===== SS-4 Lightbox =====
+  (function() {
+    var trigger   = document.getElementById('ss4-example');
+    var lightbox  = document.getElementById('ss4-lightbox');
+    var backdrop  = document.getElementById('ss4-lightbox-backdrop');
+    var closeBtn  = document.getElementById('ss4-lightbox-close');
+    var content   = document.getElementById('ss4-lightbox-content');
+    var formEl    = document.querySelector('.ss4-example-img-wrap');
+
+    if (!trigger || !lightbox) return;
+
+    function openLightbox() {
+      content.innerHTML = '';
+      var clone = formEl.cloneNode(true);
+      clone.removeAttribute('id');
+      clone.style.cursor = 'default';
+      content.appendChild(clone);
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.hidden = true;
+      document.body.style.overflow = '';
+      trigger.focus();
+    }
+
+    trigger.addEventListener('click', openLightbox);
+    trigger.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') openLightbox(); });
+    backdrop.addEventListener('click', closeLightbox);
+    closeBtn.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && !lightbox.hidden) closeLightbox(); });
+  })();
+</script>
 </body>
 </html>
