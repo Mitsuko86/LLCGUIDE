@@ -1024,42 +1024,215 @@
       <div class="checklist-item"><span class="checklist-check" aria-hidden="true">✓</span>Form 5472 filing reminder</div>
     </div>
 
-    <!--
-      EMAIL FORM — REPLACE ACTION URL
-      ============================================================
-      Replace the action with your email service endpoint:
-        Formspree:   https://formspree.io/f/YOUR_FORM_ID
-        ConvertKit:  https://app.convertkit.com/forms/YOUR_ID/subscriptions
-        Mailchimp:   copy the POST URL from your embed form code
-        MailerLite / Beehiiv: get from your embed settings
+    <!-- MailerLite Embed Form -->
+    <div class="ml-form-outer-wrap">
 
-      Update input name attributes to match your service:
-        ConvertKit: first_name + email_address
-        Mailchimp:  FNAME + EMAIL
-        Formspree:  name + email (or anything you like)
-      ============================================================
-    -->
-    <form
-      class="email-form"
-      action="https://example.com/your-email-form-action"
-      method="POST"
-      id="checklist-form"
-    >
-      <div class="form-row">
-        <div class="form-group">
-          <label for="form-name">First name</label>
-          <!-- REPLACE: update name attribute for your email service -->
-          <input type="text" id="form-name" name="first_name" placeholder="Your first name" required autocomplete="given-name"/>
-        </div>
-        <div class="form-group">
-          <label for="form-email">Email address</label>
-          <!-- REPLACE: update name attribute for your email service -->
-          <input type="email" id="form-email" name="email_address" placeholder="you@example.com" required autocomplete="email"/>
+      <!-- MailerLite styles scoped to not affect the rest of the site -->
+      <style type="text/css">
+        @import url("https://assets.mlcdn.com/fonts.css?version=1773740");
+
+        .ml-form-embedSubmitLoad {
+          display: inline-block; width: 20px; height: 20px;
+        }
+        .ml-form-embedSubmitLoad:after {
+          content: " "; display: block; width: 11px; height: 11px;
+          margin: 1px; border-radius: 50%; border: 4px solid #fff;
+          border-color: #ffffff #ffffff #ffffff transparent;
+          animation: ml-form-embedSubmitLoad 1.2s linear infinite;
+        }
+        @keyframes ml-form-embedSubmitLoad {
+          0%   { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+
+        /* Override MailerLite's white card wrapper — we want transparent to show our dark bg */
+        #mlb2-38662277.ml-form-embedContainer { box-sizing: border-box; display: block; margin: 0 auto; width: 100% !important; }
+        #mlb2-38662277.ml-form-embedContainer h4,
+        #mlb2-38662277.ml-form-embedContainer p,
+        #mlb2-38662277.ml-form-embedContainer span,
+        #mlb2-38662277.ml-form-embedContainer button { text-transform: none !important; letter-spacing: normal !important; }
+
+        #mlb2-38662277 .ml-form-embedWrapper {
+          background-color: transparent !important;
+          border: none !important;
+          box-shadow: none !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          display: block !important;
+        }
+        #mlb2-38662277 .ml-form-embedWrapper.embedForm { max-width: 100%; width: 100%; }
+
+        /* Hide MailerLite's built-in heading and description — we have our own above */
+        #mlb2-38662277 .ml-form-embedContent { display: none !important; }
+
+        /* Form layout */
+        #mlb2-38662277 .ml-form-embedBody { padding: 0 !important; }
+        #mlb2-38662277 .ml-form-embedBody form { margin: 0; width: 100%; }
+        #mlb2-38662277 .ml-form-formContent { margin: 0 0 12px 0 !important; width: 100%; }
+
+        /* Two fields side by side on wider screens */
+        #mlb2-38662277 .ml-form-fieldRow,
+        #mlb2-38662277 .ml-form-fieldRow.ml-last-item { margin: 0 0 10px 0 !important; width: 100%; }
+
+        /* Inputs — styled to match site's dark form fields */
+        #mlb2-38662277 .ml-form-fieldRow input {
+          background-color: rgba(255,255,255,0.12) !important;
+          color: #ffffff !important;
+          border: 1.5px solid rgba(255,255,255,0.25) !important;
+          border-radius: 10px !important;
+          font-family: 'Inter', sans-serif !important;
+          font-size: 0.9375rem !important;
+          padding: 0.75rem 1rem !important;
+          width: 100% !important;
+          box-sizing: border-box !important;
+          transition: border-color 0.2s ease, background-color 0.2s ease;
+        }
+        #mlb2-38662277 .ml-form-fieldRow input::placeholder { color: rgba(255,255,255,0.38) !important; }
+        #mlb2-38662277 .ml-form-fieldRow input:focus {
+          border-color: rgba(255,255,255,0.65) !important;
+          background-color: rgba(255,255,255,0.18) !important;
+          outline: none !important;
+        }
+
+        /* Submit button */
+        #mlb2-38662277 .ml-form-embedSubmit { margin-top: 4px; }
+        #mlb2-38662277 .ml-form-embedSubmit button.primary {
+          background-color: #ffffff !important;
+          color: #2563EB !important;
+          border: 2px solid #ffffff !important;
+          border-radius: 10px !important;
+          font-family: 'Inter', sans-serif !important;
+          font-size: 1rem !important;
+          font-weight: 700 !important;
+          padding: 0.875rem 1.5rem !important;
+          width: 100% !important;
+          cursor: pointer !important;
+          transition: all 0.2s ease !important;
+          letter-spacing: -0.01em !important;
+          box-shadow: 0 4px 16px rgba(0,0,0,0.2) !important;
+        }
+        #mlb2-38662277 .ml-form-embedSubmit button.primary:hover {
+          background-color: #EFF6FF !important;
+          transform: translateY(-1px) !important;
+          box-shadow: 0 6px 22px rgba(0,0,0,0.25) !important;
+        }
+        #mlb2-38662277 .ml-form-embedSubmit button.loading {
+          background-color: rgba(255,255,255,0.5) !important;
+          border-color: transparent !important;
+          width: 100% !important;
+          border-radius: 10px !important;
+          padding: 0.875rem !important;
+        }
+
+        /* Privacy text */
+        #mlb2-38662277 .ml-form-embedPermissions { margin-top: 10px !important; }
+        #mlb2-38662277 .ml-form-embedPermissionsContent p,
+        #mlb2-38662277 .ml-form-embedPermissionsContent span {
+          color: rgba(255,255,255,0.42) !important;
+          font-size: 0.8125rem !important;
+          font-family: 'Inter', sans-serif !important;
+          text-align: center !important;
+        }
+
+        /* Success message */
+        #mlb2-38662277 .ml-form-successBody { padding: 0 !important; }
+        #mlb2-38662277 .ml-form-successContent h4 {
+          color: #ffffff !important;
+          font-family: 'Inter', sans-serif !important;
+          font-size: 1.25rem !important;
+          font-weight: 700 !important;
+          text-align: center !important;
+          margin-bottom: 0.75rem !important;
+        }
+        #mlb2-38662277 .ml-form-successContent p {
+          color: rgba(255,255,255,0.78) !important;
+          font-family: 'Inter', sans-serif !important;
+          font-size: 0.9375rem !important;
+          text-align: center !important;
+          line-height: 1.65 !important;
+        }
+
+        /* reCAPTCHA spacing */
+        #mlb2-38662277 .ml-form-recaptcha { margin-bottom: 12px !important; }
+
+        /* Align center wrapper */
+        #mlb2-38662277 .ml-form-align-center { text-align: left; }
+      </style>
+
+      <div id="mlb2-38662277" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-38662277">
+        <div class="ml-form-align-center">
+          <div class="ml-form-embedWrapper embedForm">
+
+            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+              <div class="ml-form-embedContent" style="display:none"></div>
+
+              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2203408/forms/182302239075862445/subscribe" data-code="" method="post" target="_blank">
+                <div class="ml-form-formContent">
+                  <div class="ml-form-fieldRow">
+                    <div class="ml-field-group ml-field-name">
+                      <input aria-label="name" type="text" class="form-control" name="fields[name]" placeholder="First Name (Optional)" autocomplete="given-name">
+                    </div>
+                  </div>
+                  <div class="ml-form-fieldRow ml-last-item">
+                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                      <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Email address" autocomplete="email">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ml-form-embedPermissions">
+                  <div class="ml-form-embedPermissionsContent default privacy-policy">
+                    <p><span style="font-size:10px;">By signing up you'll receive the LLC checklist and occasional updates. Unsubscribe anytime.</span></p>
+                  </div>
+                </div>
+
+                <div class="ml-form-recaptcha ml-validate-required" style="float:left;">
+                  <style>
+                    .ml-form-recaptcha { margin-bottom: 20px; }
+                    .ml-form-recaptcha.ml-error iframe { border: solid 1px #ff0000; }
+                    @media screen and (max-width: 480px) {
+                      .ml-form-recaptcha { width: 220px !important; }
+                      .g-recaptcha { transform: scale(0.78); -webkit-transform: scale(0.78); transform-origin: 0 0; -webkit-transform-origin: 0 0; }
+                    }
+                  </style>
+                  <script src="https://www.google.com/recaptcha/api.js"></script>
+                  <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+                </div>
+
+                <input type="hidden" name="ml-submit" value="1">
+                <div class="ml-form-embedSubmit">
+                  <button type="submit" class="primary">Send Me the Free Checklist</button>
+                  <button disabled="disabled" style="display:none;" type="button" class="loading">
+                    <div class="ml-form-embedSubmitLoad"></div>
+                    <span class="sr-only">Loading...</span>
+                  </button>
+                </div>
+                <input type="hidden" name="anticsrf" value="true">
+              </form>
+            </div>
+
+            <div class="ml-form-successBody row-success" style="display:none;">
+              <div class="ml-form-successContent">
+                <h4>Thanks! Your checklist is on the way.</h4>
+                <p>If you don't see it within a few minutes, check your spam folder and mark it as "Not Spam".</p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
-      <button type="submit" class="form-submit">Send Me the Checklist</button>
-      <p class="form-privacy">No spam. Just practical updates and resources.</p>
-    </form>
+
+      <script>
+        function ml_webform_success_38662277() {
+          var $ = ml_jQuery || jQuery;
+          $('.ml-subscribe-form-38662277 .row-success').show();
+          $('.ml-subscribe-form-38662277 .row-form').hide();
+        }
+      </script>
+      <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" type="text/javascript"></script>
+      <script>fetch("https://assets.mailerlite.com/jsonp/2203408/forms/182302239075862445/takel")</script>
+
+    </div><!-- end ml-form-outer-wrap -->
 
   </div>
 </section>
