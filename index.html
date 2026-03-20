@@ -706,10 +706,6 @@
         </div><!-- end ss4-form-render -->
       </div><!-- end ss4-example-img-wrap -->
 
-      <p class="ss4-example-caption">
-        This is a sample only. Your entries will differ. &nbsp;
-        <a href="https://www.irs.gov/pub/irs-pdf/fss4.pdf" target="_blank" rel="noopener noreferrer">Download the blank SS-4 form →</a>
-      </p>
     </div><!-- end ss4-example-wrap -->
 
     <!-- LIGHTBOX — click image to enlarge -->
@@ -1395,7 +1391,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+<script src="script.js"></script>
 <script>
   // ===== SS-4 Lightbox =====
   (function() {
@@ -1427,4 +1423,10 @@
 
     trigger.addEventListener('click', openLightbox);
     trigger.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') openLightbox(); });
-    backd
+    backdrop.addEventListener('click', closeLightbox);
+    closeBtn.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && !lightbox.hidden) closeLightbox(); });
+  })();
+</script>
+</body>
+</html>
