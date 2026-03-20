@@ -565,7 +565,7 @@
             <div class="ss4-field-row">
               <div class="ss4-field ss4-field--highlight ss4-field--half">
                 <div class="ss4-field-label">4a &nbsp;Mailing address (room, apt., suite no., and street, or P.O. box)</div>
-                <div class="ss4-field-value ss4-handprint">38 SMITH STREET</div>
+                <div class="ss4-field-value ss4-handprint">123 SMITH STREET</div>
                 <div class="ss4-arrow-label ss4-arrow-label--below">Your mailing address</div>
               </div>
               <div class="ss4-field ss4-field--half">
@@ -597,8 +597,10 @@
             <div class="ss4-field-row">
               <div class="ss4-field ss4-field--highlight ss4-field--half">
                 <div class="ss4-field-label">7a &nbsp;Name of responsible party</div>
-                <div class="ss4-field-value ss4-handprint">JOHN DOE</div>
-                <div class="ss4-arrow-label ss4-arrow-label--below">Your full legal name</div>
+                <div class="ss4-field-value" style="display:flex;align-items:center;gap:8px;">
+                  <span class="ss4-handprint">JOHN DOE</span>
+                  <span class="ss4-arrow-label" style="position:static;transform:none;">Your full legal name</span>
+                </div>
               </div>
               <div class="ss4-field ss4-field--highlight ss4-field--half">
                 <div class="ss4-field-label">7b &nbsp;SSN, ITIN, or EIN</div>
@@ -628,8 +630,8 @@
             <div class="ss4-field ss4-field--full">
               <div class="ss4-field-label">8c &nbsp;If 8a is "Yes," was the LLC organized in the United States?</div>
               <div class="ss4-field-value">
-                <span class="ss4-checkbox" aria-hidden="true">☐</span> Yes &nbsp;&nbsp;
-                <span class="ss4-checkbox ss4-checkbox--checked" aria-hidden="true">✓</span> No
+                <span class="ss4-checkbox ss4-checkbox--checked" aria-hidden="true">✓</span> Yes &nbsp;&nbsp;
+                <span class="ss4-checkbox" aria-hidden="true">☐</span> No
               </div>
             </div>
 
@@ -660,7 +662,7 @@
               <div class="ss4-field ss4-field--highlight ss4-field--half">
                 <div class="ss4-field-label">12 &nbsp;Closing month of accounting year</div>
                 <div class="ss4-field-value ss4-handprint">DECEMBER</div>
-                <div class="ss4-arrow-label ss4-arrow-label--below">Usually December</div>
+                <div class="ss4-arrow-label ss4-arrow-label--below">December</div>
               </div>
             </div>
 
@@ -689,6 +691,8 @@
                 <div class="ss4-sig-block ss4-sig-block--phone">
                   <div class="ss4-field-label" style="font-size:0.7rem;">Telephone number</div>
                   <div class="ss4-field-value ss4-handprint" style="font-size:0.8rem;">1-999-111-1111</div>
+                  <div class="ss4-field-label" style="font-size:0.7rem;margin-top:4px;">Fax number (to receive EIN)</div>
+                  <div class="ss4-field-value ss4-handprint" style="font-size:0.8rem;">+1-304-707-9471</div>
                 </div>
               </div>
               <div class="ss4-arrow-label ss4-arrow-label--right">Sign and date the form</div>
@@ -1363,7 +1367,7 @@
           Have questions about forming your U.S. LLC as a non-resident? We're here to help.
         </p>
         <div class="footer-links">
-          <a href="mailto:paul@llcforforeigners.com">paul@llcforforeigners.com</a>
+          <a href="/cdn-cgi/l/email-protection#770716021b371b1b14111805111805121e10191205045914181a"><span class="__cf_email__" data-cfemail="3848594d547854545b5e574a5e574a5d515f565d4a4b165b5755">[email&#160;protected]</span></a>
           <span style="font-size:0.875rem; color:rgba(255,255,255,0.4);">Montreal, QC, Canada</span>
         </div>
       </div>
@@ -1391,7 +1395,7 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
 <script>
   // ===== SS-4 Lightbox =====
   (function() {
@@ -1423,10 +1427,4 @@
 
     trigger.addEventListener('click', openLightbox);
     trigger.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') openLightbox(); });
-    backdrop.addEventListener('click', closeLightbox);
-    closeBtn.addEventListener('click', closeLightbox);
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && !lightbox.hidden) closeLightbox(); });
-  })();
-</script>
-</body>
-</html>
+    backd
